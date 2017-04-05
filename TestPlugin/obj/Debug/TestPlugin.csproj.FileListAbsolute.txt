@@ -1,0 +1,11 @@
+C:\Code\tide-103608\TileMapEditor\TestPlugin\obj\Debug\TestPlugin.Properties.Resources.resources
+C:\Code\tide-103608\TileMapEditor\TestPlugin\obj\Debug\TestPlugin.csproj.GenerateResource.Cache
+C:\Code\tide-103608\TileMapEditor\TestPlugin\obj\Debug\TestPlugin.csprojResolveAssemblyReference.cache
+C:\Code\tide-103608\TileMapEditor\TestPlugin\bin\Debug\TestPlugin.dll
+C:\Code\tide-103608\TileMapEditor\TestPlugin\bin\Debug\TestPlugin.pdb
+C:\Code\tide-103608\TileMapEditor\TestPlugin\bin\Debug\tIDE.Plugin.dll
+C:\Code\tide-103608\TileMapEditor\TestPlugin\bin\Debug\TilePC.dll
+C:\Code\tide-103608\TileMapEditor\TestPlugin\bin\Debug\tIDE.Plugin.pdb
+C:\Code\tide-103608\TileMapEditor\TestPlugin\bin\Debug\TilePC.pdb
+C:\Code\tide-103608\TileMapEditor\TestPlugin\obj\Debug\TestPlugin.dll
+C:\Code\tide-103608\TileMapEditor\TestPlugin\obj\Debug\TestPlugin.pdb

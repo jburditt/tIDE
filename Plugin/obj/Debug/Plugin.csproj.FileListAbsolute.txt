@@ -1,0 +1,7 @@
+C:\Code\tide-103608\TileMapEditor\Plugin\bin\Debug\tIDE.Plugin.dll
+C:\Code\tide-103608\TileMapEditor\Plugin\bin\Debug\tIDE.Plugin.pdb
+C:\Code\tide-103608\TileMapEditor\Plugin\bin\Debug\TilePC.dll
+C:\Code\tide-103608\TileMapEditor\Plugin\bin\Debug\TilePC.pdb
+C:\Code\tide-103608\TileMapEditor\Plugin\obj\Debug\Plugin.csprojResolveAssemblyReference.cache
+C:\Code\tide-103608\TileMapEditor\Plugin\obj\Debug\tIDE.Plugin.dll
+C:\Code\tide-103608\TileMapEditor\Plugin\obj\Debug\tIDE.Plugin.pdb

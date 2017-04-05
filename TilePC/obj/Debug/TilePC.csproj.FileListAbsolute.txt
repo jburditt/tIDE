@@ -1,0 +1,7 @@
+C:\Code\tide-103608\TileMapEditor\TilePC\bin\Debug\TilePC.dll
+C:\Code\tide-103608\TileMapEditor\TilePC\bin\Debug\TilePC.pdb
+C:\Code\tide-103608\TileMapEditor\TilePC\obj\Debug\TilePC.dll
+C:\Code\tide-103608\TileMapEditor\TilePC\obj\Debug\TilePC.pdb
+C:\Code\tide-103608\TileMapEditor\TilePC\bin\Debug\System.Net.Http.dll
+C:\Code\tide-103608\TileMapEditor\TilePC\bin\Debug\System.Net.Http.xml
+C:\Code\tide-103608\TileMapEditor\TilePC\obj\Debug\TilePC.csprojResolveAssemblyReference.cache
