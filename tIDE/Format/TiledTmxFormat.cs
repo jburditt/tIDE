@@ -32,7 +32,7 @@ namespace tIDE.Format
     {
         #region Public Methods
 
-        public CompatibilityReport DetermineCompatibility(Map map)
+        public CompatibilityReport DetermineCompatibility(TideMap map)
         {
             List<CompatibilityNote> compatibilityNotes = new List<CompatibilityNote>();
 
@@ -110,7 +110,7 @@ namespace tIDE.Format
             return new CompatibilityReport(compatibilityNotes);
         }
 
-        public Map Load(Stream stream)
+        public TideMap Load(Stream stream)
         {
             XmlTextReader xmlReader = new XmlTextReader(stream);
             xmlReader.WhitespaceHandling = WhitespaceHandling.None;
@@ -131,7 +131,7 @@ namespace tIDE.Format
             int tileWidth = xmlHelper.GetIntAttribute("tilewidth");
             int tileHeight = xmlHelper.GetIntAttribute("tileheight");
 
-            Map map = new Map();
+            TideMap map = new TideMap();
 
             while (true)
             {
@@ -156,7 +156,7 @@ namespace tIDE.Format
             return map;
         }
 
-        public void Store(Map map, Stream stream)
+        public void Store(TideMap map, Stream stream)
         {
             TiledFormatOptionsDialog tiledFormatOptionsDialog
                 = new TiledFormatOptionsDialog();
@@ -273,7 +273,7 @@ namespace tIDE.Format
             xmlWriter.WriteEndElement();
         }
 
-        private void LoadTileSet(XmlHelper xmlHelper, Map map)
+        private void LoadTileSet(XmlHelper xmlHelper, TideMap map)
         {
             string id = xmlHelper.GetAttribute("name");
 
@@ -570,7 +570,7 @@ namespace tIDE.Format
             xmlHelper.AdvanceEndElement("data");
         }
 
-        private void LoadLayer(XmlHelper xmlHelper, Map map)
+        private void LoadLayer(XmlHelper xmlHelper, TideMap map)
         {
             if (map.TileSheets.Count == 0)
                 throw new Exception("Must load at least one tileset to determine layer tile size");

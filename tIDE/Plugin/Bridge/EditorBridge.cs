@@ -79,7 +79,7 @@ namespace tIDE.Plugin.Bridge
             innerPanel.MouseUp += OnMapPanelMouseUp;
         }
 
-        public Map Map { get { return m_mapPanel.Map; } }
+        public TideMap Map { get { return m_mapPanel.Map; } }
 
         public Layer Layer { get { return m_mapPanel.SelectedLayer; } }
 

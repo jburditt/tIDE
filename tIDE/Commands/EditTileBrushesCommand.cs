@@ -11,13 +11,13 @@ namespace tIDE.Commands
 {
     internal class EditTileBrushesCommand: Command
     {
-        private Map m_map;
+        private TideMap m_map;
         private TileBrushCollection m_currentTileBrushCollection;
         private TileBrushCollection m_newTileBrushCollection;
         private TileBrushCollection m_oldTileBrushCollection;
 
         public EditTileBrushesCommand(
-            Map map,
+            TideMap map,
             TileBrushCollection currentTileBrushCollection,
             TileBrush newTileBrush)
         {
@@ -31,7 +31,7 @@ namespace tIDE.Commands
         }
 
         public EditTileBrushesCommand(
-            Map map,
+            TideMap map,
             TileBrushCollection currentTileBrushCollection,
             TileBrushCollection newTileBrushCollection)
         {

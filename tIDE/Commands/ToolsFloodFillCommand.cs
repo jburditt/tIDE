@@ -46,7 +46,8 @@ namespace tIDE.Commands
 
             locationQueue.Enqueue(m_startLocation);
 
-            while (locationQueue.Count > 0)
+            // TODO fix bug when filling the entire map after already filling the entire map
+            while (locationQueue.Count > 0 && locationQueue.Count < 300000)
             {
                 Location location = locationQueue.Dequeue();
                 Tile currentTile = m_layer.Tiles[location];

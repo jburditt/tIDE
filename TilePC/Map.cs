@@ -12,8 +12,6 @@
 using System;
 using System.Collections.ObjectModel;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 using xTile.Dimensions;
 using xTile.Display;
@@ -27,7 +25,7 @@ namespace xTile
     /// A multi-layer tile-based map implementation. The contained Layers are
     /// ordered by depth
     /// </summary>
-    public class Map : DescribedComponent
+    public class TideMap : DescribedComponent
     {
         #region Public Properties
 
@@ -90,8 +88,8 @@ namespace xTile
         /// <summary>
         /// Constructs a map with a default "Untitled Map" ID
         /// </summary>
-        public Map()
-            : base("Untiled map")
+        public TideMap()
+            : base("Untilted map")
         {
             m_tileSheets = new List<TileSheet>();
             m_layers = new List<Layer>();
@@ -102,7 +100,7 @@ namespace xTile
         /// Constructs a map with the given ID
         /// </summary>
         /// <param name="id">ID to assign to the Map</param>
-        public Map(string id)
+        public TideMap(string id)
             :base(id)
         {
             m_tileSheets = new List<TileSheet>();

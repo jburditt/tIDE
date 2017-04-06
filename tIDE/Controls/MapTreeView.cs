@@ -138,7 +138,7 @@ namespace tIDE.Controls
         [Description("The Map structure associated with this control"),
          Category("Data"), Browsable(true)
         ]
-        public Map Map
+        public TideMap Map
         {
             get { return m_map; }
             set
@@ -422,7 +422,7 @@ namespace tIDE.Controls
 
         #region Private Variables
 
-        private Map m_map;
+        private TideMap m_map;
 
         #endregion
     }

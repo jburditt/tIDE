@@ -126,7 +126,7 @@ namespace xTile.Format
         /// </summary>
         /// <param name="filePath">Path to the map file to load</param>
         /// <returns>a loaded Map instance</returns>
-        public Map LoadMap(string filePath)
+        public TideMap LoadMap(string filePath)
         {
             try
             {
@@ -144,7 +144,7 @@ namespace xTile.Format
 
                 using (Stream fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
                 {
-                    Map map = mapFormat.Load(fileStream);
+                    TideMap map = mapFormat.Load(fileStream);
                     fileStream.Close();
     
                     return map;

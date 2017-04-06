@@ -69,7 +69,7 @@ namespace tIDE.Commands
 
             TileImageCache.Instance.Refresh(m_tileSheet);
 
-            Map map = m_tileSheet.Map;
+            TideMap map = m_tileSheet.Map;
 
             foreach (Layer layer in map.Layers)
             {

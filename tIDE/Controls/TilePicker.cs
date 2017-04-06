@@ -103,7 +103,7 @@ namespace tIDE.Controls
 
         #region Public Properties
 
-        public Map Map
+        public TideMap Map
         {
             get { return m_map; }
             set
@@ -702,7 +702,7 @@ namespace tIDE.Controls
 
         #region Private Fields
 
-        private Map m_map;
+        private TideMap m_map;
         private TileSheet m_tileSheet;
         private OrderMode m_orderMode;
         private bool m_autoUpdate;

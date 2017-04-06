@@ -10,10 +10,10 @@ namespace tIDE.Commands
 {
     internal class LayerNewCommand: Command
     {
-        private Map m_map;
+        private TideMap m_map;
         private Layer m_newLayer;
 
-        public LayerNewCommand(Map map, Layer newLayer)
+        public LayerNewCommand(TideMap map, Layer newLayer)
         {
             m_map = map;
             m_newLayer = newLayer;

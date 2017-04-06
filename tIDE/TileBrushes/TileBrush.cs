@@ -83,7 +83,7 @@ namespace tIDE.TileBrushes
         internal void ApplyTo(Layer layer, Location brushLocation,
             TileSelection tileSelection)
         {
-            Map map = layer.Map;
+            TideMap map = layer.Map;
             xTile.Dimensions.Size layerTileSize = layer.TileSize;
 
             if (layerTileSize != m_tileSize)
@@ -122,7 +122,7 @@ namespace tIDE.TileBrushes
                 tileSelection.AddLocation(brushLocation + tileBrushElement.Location);
         }
 
-        internal void StoreInMap(Map map)
+        internal void StoreInMap(TideMap map)
         {
             if (m_tileBrushElements.Count == 0)
                 return;
