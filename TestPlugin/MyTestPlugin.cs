@@ -12,22 +12,22 @@ using tIDE.Plugin;
 using tIDE.Plugin.Interface;
 using Player;
 
-namespace TestPlugin
+namespace RPGPlugin
 {
-    public class MyTestPlugin : IPlugin
+    public class RPGPlugin : IPlugin
     {
         private Map m_map;
 
         private IMenuItem m_myDropDownMenu;
         private IMenuItem m_myMenuItem;
         private IToolBar m_myToolBar;
-        private IToolBarButton m_myToolBarButton1, m_myToolBarButton2;
+        private IToolBarButton m_npcToolBarButton, m_eventToolBarButton;
 
         #region IPlugin Members
 
         public string Name
         {
-            get { return "My Test Plugin"; }
+            get { return "MonoRPG Plugin"; }
         }
 
         public Version Version
@@ -37,12 +37,12 @@ namespace TestPlugin
 
         public string Author
         {
-            get { return "Colin Vella"; }
+            get { return "Jebb Burditt"; }
         }
 
         public string Description
         {
-            get {return "This is a description for the plugin"; }
+            get {return "MonoRPG plugin"; }
         }
 
         public System.Drawing.Bitmap SmallIcon
@@ -63,31 +63,31 @@ namespace TestPlugin
 
         public void Initialise(IApplication application)
         {
-            m_myDropDownMenu = application.MenuStrip.DropDownMenus.Add("My Custom Menu");
+            m_myDropDownMenu = application.MenuStrip.DropDownMenus.Add("RPG");
             m_myDropDownMenu.Image = Properties.Resources.Menu;
 
-            m_myMenuItem = application.MenuStrip.DropDownMenus["My Custom Menu"].SubItems.Add("My Menu Item 1");
+            m_myMenuItem = application.MenuStrip.DropDownMenus["RPG"].SubItems.Add("NPC");
             m_myMenuItem.Image = Properties.Resources.Action;
-            m_myMenuItem.ShortcutKeys = (Keys)(Keys.Control | Keys.Z);
-            m_myMenuItem.EventHandler = MyCustomAction;
+            m_myMenuItem.ShortcutKeys = Keys.Control | Keys.N;
+            m_myMenuItem.EventHandler = RPGAction;
 
-            m_myToolBar = application.ToolBars.Add("MyToolBar");
+            m_myToolBar = application.ToolBars.Add("RPG ToolBar");
 
-            m_myToolBarButton1 = m_myToolBar.Buttons.Add("Button1", Properties.Resources.Action);
-            m_myToolBarButton1.ToolTipText = "My ToolStrip Button 1";
-            m_myToolBarButton1.Checked = true;
-            m_myToolBarButton1.EventHandler = MyCustomAction;
+            m_npcToolBarButton = m_myToolBar.Buttons.Add("Button1", Properties.Resources.Action);
+            m_npcToolBarButton.ToolTipText = "Place NPC";
+            m_npcToolBarButton.Checked = true;
+            m_npcToolBarButton.EventHandler = RPGAction;
 
-            m_myToolBarButton2 = m_myToolBar.Buttons.Add("Button2", Properties.Resources.Action);
-            m_myToolBarButton2.ToolTipText = "My second toolbar button";
-            m_myToolBarButton2.Enabled = false;
+            m_eventToolBarButton = m_myToolBar.Buttons.Add("Button2", Properties.Resources.Action);
+            m_eventToolBarButton.ToolTipText = "Place Event";
+            m_eventToolBarButton.Enabled = false;
 
             application.Editor.MouseDown = OnEditorMouseDown;
         }
 
         public void Shutdown(IApplication application)
         {
-            m_myToolBarButton1 = m_myToolBarButton2 = null;
+            m_npcToolBarButton = m_eventToolBarButton = null;
 
             application.ToolBars.Remove(m_myToolBar);
             m_myToolBar = null;
@@ -98,15 +98,14 @@ namespace TestPlugin
             m_myDropDownMenu = null;
         }
 
-        public void MyCustomAction(object sender, EventArgs eventArgs)
+        public void RPGAction(object sender, EventArgs eventArgs)
         {
-            m_myToolBarButton1.Checked = !m_myToolBarButton1.Checked;
+            m_npcToolBarButton.Checked = !m_npcToolBarButton.Checked;
         }
-
 
         public void OnEditorMouseDown(MouseEventArgs mouseEventArgs, Location tileLocation)
         {
-            if (m_myToolBarButton1.Checked)
+            if (m_npcToolBarButton.Checked)
             {
                 using (var form = new NPCDialog())
                 {

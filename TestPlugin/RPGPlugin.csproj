@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TestPlugin</RootNamespace>
     <AssemblyName>TestPlugin</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>
     <SccLocalPath>SAK</SccLocalPath>
@@ -32,6 +32,7 @@
     <WarningLevel>4</WarningLevel>
     <PlatformTarget>x86</PlatformTarget>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -42,8 +43,12 @@
     <WarningLevel>4</WarningLevel>
     <PlatformTarget>x86</PlatformTarget>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Common">
+      <HintPath>.\Common.dll</HintPath>
+    </Reference>
     <Reference Include="Player">
       <HintPath>.\Player.dll</HintPath>
     </Reference>
@@ -66,6 +71,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form\ImagePickerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ImagePickerForm.Designer.cs">
+      <DependentUpon>ImagePickerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyTestPlugin.cs" />
     <Compile Include="NPCDialog.cs">
       <SubType>Form</SubType>
@@ -87,6 +98,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Form\ImagePickerForm.resx">
+      <DependentUpon>ImagePickerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NPCDialog.resx">
+      <DependentUpon>NPCDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
