@@ -140,11 +140,11 @@ namespace xTile.Layers
 
             int layerLocationX = mapWidthDifference > 0
                 ? mapDisplayLocation.X * layerWidthDifference / mapWidthDifference
-                : 0;
+                : mapDisplayLocation.X;
 
             int layerLocationY = mapHeightDifference > 0
                 ? mapDisplayLocation.Y * layerHeightDifference / mapHeightDifference
-                : 0;
+                : mapDisplayLocation.Y;
 
             return new Location(layerLocationX, layerLocationY);
         }

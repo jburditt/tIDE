@@ -97,12 +97,14 @@ namespace TestPlugin
 
         public void MyCustomAction(object sender, EventArgs eventArgs)
         {
-            MessageBox.Show("My custom action!");
+            m_myToolBarButton1.Checked = !m_myToolBarButton1.Checked;
         }
+
 
         public void OnEditorMouseDown(MouseEventArgs mouseEventArgs, Location tileLocation)
         {
-            //MessageBox.Show("Tile location = " + tileLocation);
+            if (m_myToolBarButton1.Checked)
+                MessageBox.Show("Tile location = " + tileLocation);
         }
 
         #endregion

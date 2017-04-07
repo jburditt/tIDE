@@ -45,3 +45,6 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+Plugin/obj/Debug/Plugin.csproj.FileListAbsolute.txt
+TestPlugin/obj/Debug/TestPlugin.csproj.FileListAbsolute.txt
+TilePC/obj/Debug/TilePC.csproj.FileListAbsolute.txt
