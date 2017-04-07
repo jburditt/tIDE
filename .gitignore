@@ -48,3 +48,7 @@ Temporary Items
 Plugin/obj/Debug/Plugin.csproj.FileListAbsolute.txt
 TestPlugin/obj/Debug/TestPlugin.csproj.FileListAbsolute.txt
 TilePC/obj/Debug/TilePC.csproj.FileListAbsolute.txt
+Plugin/obj/Debug/Plugin.csproj.FileListAbsolute.txt
+TestPlugin/obj/Debug/build.force
+tIDE/obj/Debug/tIDE.csproj.FileListAbsolute.txt
+TilePC/obj/Debug/TilePC.csproj.FileListAbsolute.txt

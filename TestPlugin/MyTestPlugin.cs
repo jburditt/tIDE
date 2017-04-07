@@ -10,11 +10,14 @@ using xTile.Dimensions;
 
 using tIDE.Plugin;
 using tIDE.Plugin.Interface;
+using Player;
 
 namespace TestPlugin
 {
     public class MyTestPlugin : IPlugin
     {
+        private Map m_map;
+
         private IMenuItem m_myDropDownMenu;
         private IMenuItem m_myMenuItem;
         private IToolBar m_myToolBar;
@@ -104,7 +107,22 @@ namespace TestPlugin
         public void OnEditorMouseDown(MouseEventArgs mouseEventArgs, Location tileLocation)
         {
             if (m_myToolBarButton1.Checked)
-                MessageBox.Show("Tile location = " + tileLocation);
+            {
+                using (var form = new NPCDialog())
+                {
+                    var result = form.ShowDialog();
+
+                    if (result == DialogResult.OK)
+                    {
+                        form.Selected.Pos = new Vector(tileLocation.X * m_map.TileWidth, tileLocation.Y * m_map.TileHeight);
+
+                        // TODO Check if NPC exists before adding
+                        m_map.NPC.Add(form.Selected);
+
+                        // TODO load image
+                    }
+                }
+            }
         }
 
         #endregion
